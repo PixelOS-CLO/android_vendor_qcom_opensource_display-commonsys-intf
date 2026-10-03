@@ -21,10 +21,15 @@
 // later when a module using the interface is updated, e.g., Mainline modules.
 
 package vendor.qti.hardware.display.composer3;
+
+/**
+ * App layer lock type
+ */
 @VintfStability
-interface IQtiComposer3Client {
-  android.hardware.graphics.composer3.CommandResultPayload[] qtiExecuteCommands(in android.hardware.graphics.composer3.DisplayCommand[] commands, in vendor.qti.hardware.display.composer3.QtiDisplayCommand[] qtiCommands);
-  void qtiTryDrawMethod(long display, vendor.qti.hardware.display.composer3.QtiDrawMethod drawMethod);
-  void qtiSetDisplayDeviceConfig(long display, in vendor.qti.hardware.display.composer3.QtiDisplayDeviceConfig displayDeviceConfig);
-  vendor.qti.hardware.display.composer3.QtiDisplayViewMode qtiGetDisplayViewMode(long display);
+@Backing(type="int")
+enum QtiRenderLayerReferenceSpaceType {
+    RENDER_LAYER_REFERENCE_SPACE_NONE = 0,
+    RENDER_LAYER_REFERENCE_SPACE_WORLD = 1,
+    RENDER_LAYER_REFERENCE_SPACE_HEAD = 2,
+    RENDER_LAYER_REFERENCE_SPACE_SPHERE = 3,
 }

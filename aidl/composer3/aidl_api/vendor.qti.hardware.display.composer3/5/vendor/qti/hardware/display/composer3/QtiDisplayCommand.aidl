@@ -22,9 +22,9 @@
 
 package vendor.qti.hardware.display.composer3;
 @VintfStability
-interface IQtiComposer3Client {
-  android.hardware.graphics.composer3.CommandResultPayload[] qtiExecuteCommands(in android.hardware.graphics.composer3.DisplayCommand[] commands, in vendor.qti.hardware.display.composer3.QtiDisplayCommand[] qtiCommands);
-  void qtiTryDrawMethod(long display, vendor.qti.hardware.display.composer3.QtiDrawMethod drawMethod);
-  void qtiSetDisplayDeviceConfig(long display, in vendor.qti.hardware.display.composer3.QtiDisplayDeviceConfig displayDeviceConfig);
-  vendor.qti.hardware.display.composer3.QtiDisplayViewMode qtiGetDisplayViewMode(long display);
+parcelable QtiDisplayCommand {
+  long display;
+  vendor.qti.hardware.display.composer3.QtiLayerCommand[] qtiLayers;
+  @nullable android.hardware.graphics.composer3.ClientTarget clientTarget_3_1;
+  long time;
 }

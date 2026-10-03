@@ -4,12 +4,12 @@
  */
 
 package vendor.qti.hardware.display.composer3;
-import android.hardware.graphics.common.Rect;
 
+/**
+ * Display pose latch offset in nano seconds
+ */
 @VintfStability
-parcelable QtiPrivacyRegion {
-    float cornerRadius;
-    Rect rect;
-    int index;
-    boolean isDimming;
+parcelable QtiParcelableDisplayPoseLatchOffset
+{
+    long displayPoseLatchOffsetNs;
 }

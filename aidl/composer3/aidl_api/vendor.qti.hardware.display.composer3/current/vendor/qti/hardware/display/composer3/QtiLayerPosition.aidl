@@ -21,10 +21,18 @@
 // later when a module using the interface is updated, e.g., Mainline modules.
 
 package vendor.qti.hardware.display.composer3;
+
+/**
+  represents position within a space.
+  three dimensional vector.
+
+  x is x coordinate of the vector.
+  y is y coordinate of the vector.
+  z is z cooridnate of the vector.
+*/
 @VintfStability
-interface IQtiComposer3Client {
-  android.hardware.graphics.composer3.CommandResultPayload[] qtiExecuteCommands(in android.hardware.graphics.composer3.DisplayCommand[] commands, in vendor.qti.hardware.display.composer3.QtiDisplayCommand[] qtiCommands);
-  void qtiTryDrawMethod(long display, vendor.qti.hardware.display.composer3.QtiDrawMethod drawMethod);
-  void qtiSetDisplayDeviceConfig(long display, in vendor.qti.hardware.display.composer3.QtiDisplayDeviceConfig displayDeviceConfig);
-  vendor.qti.hardware.display.composer3.QtiDisplayViewMode qtiGetDisplayViewMode(long display);
+parcelable QtiLayerPosition {
+    float x;
+    float y;
+    float z;
 }

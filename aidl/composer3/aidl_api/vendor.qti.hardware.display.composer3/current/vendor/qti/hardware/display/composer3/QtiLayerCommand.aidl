@@ -5,7 +5,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
-
 // This file is a snapshot of an AIDL file. Do not edit it manually. There are
 // two cases:
 // 1). this is a frozen version file - do not edit this in any case.
@@ -19,7 +18,6 @@
 // independently updatable components of the system. If a device is shipped
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
-
 package vendor.qti.hardware.display.composer3;
 @VintfStability
 parcelable QtiLayerCommand {
@@ -28,4 +26,11 @@ parcelable QtiLayerCommand {
   vendor.qti.hardware.display.composer3.QtiLayerFlags qtiLayerFlags;
   @nullable vendor.qti.hardware.display.composer3.QtiPrivacyRegion[] qtiPrivacyRegions;
   @nullable vendor.qti.hardware.display.composer3.QtiCornerRadius qtiCornerRadius;
+  @nullable vendor.qti.hardware.display.composer3.QtiParcelableRenderLayerReferenceSpaceType qtiRenderLayerReferenceSpaceType;
+  @nullable vendor.qti.hardware.display.composer3.QtiParcelableCompositionLayerType qtiCompositionLayerType;
+  @nullable vendor.qti.hardware.display.composer3.QtiLayerPose qtiLayerPose;
+  @nullable vendor.qti.hardware.display.composer3.QtiLayerQuadSize qtiLayerQuadSize;
+  @nullable vendor.qti.hardware.display.composer3.QtiLayerFrustum qtiLayerFrustum;
+  @nullable vendor.qti.hardware.display.composer3.QtiLayerPlaneEquation qtiLayerPlaneEquation;
+  @nullable vendor.qti.hardware.display.composer3.QtiParcelableLayerVisibilityType qtiLayerVisibilityType;
 }

@@ -21,10 +21,16 @@
 // later when a module using the interface is updated, e.g., Mainline modules.
 
 package vendor.qti.hardware.display.composer3;
+
+/**
+  Layer Visibility Type
+*/
 @VintfStability
-interface IQtiComposer3Client {
-  android.hardware.graphics.composer3.CommandResultPayload[] qtiExecuteCommands(in android.hardware.graphics.composer3.DisplayCommand[] commands, in vendor.qti.hardware.display.composer3.QtiDisplayCommand[] qtiCommands);
-  void qtiTryDrawMethod(long display, vendor.qti.hardware.display.composer3.QtiDrawMethod drawMethod);
-  void qtiSetDisplayDeviceConfig(long display, in vendor.qti.hardware.display.composer3.QtiDisplayDeviceConfig displayDeviceConfig);
-  vendor.qti.hardware.display.composer3.QtiDisplayViewMode qtiGetDisplayViewMode(long display);
+@Backing(type="int")
+enum QtiLayerVisibilityType
+{
+    LAYER_VISIBILITY_NONE = 0,
+    LAYER_VISIBILITY_LEFT_EYE = 1,
+    LAYER_VISIBILITY_RIGHT_EYE = 2,
+    LAYER_VISIBILITY_BOTH_EYES = 3
 }

@@ -4,12 +4,15 @@
  */
 
 package vendor.qti.hardware.display.composer3;
-import android.hardware.graphics.common.Rect;
 
+/**
+  plane equation
+  ax+by+cz+d = 0 where a, b, c and d are components of the normal vector.
+*/
 @VintfStability
-parcelable QtiPrivacyRegion {
-    float cornerRadius;
-    Rect rect;
-    int index;
-    boolean isDimming;
+parcelable QtiLayerPlaneEquation {
+    float a;
+    float b;
+    float c;
+    float d;
 }

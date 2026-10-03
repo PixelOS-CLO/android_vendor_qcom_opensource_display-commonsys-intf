@@ -6,7 +6,7 @@
 package vendor.qti.hardware.display.composer3;
 import android.hardware.graphics.composer3.ClientTarget;
 import vendor.qti.hardware.display.composer3.QtiLayerCommand;
-
+import vendor.qti.hardware.display.composer3.QtiParcelableDisplayPoseLatchOffset;
 
 @VintfStability
 parcelable QtiDisplayCommand {
@@ -31,4 +31,10 @@ parcelable QtiDisplayCommand {
      * The display elapse time.
      */
     long time;
+
+    /**
+     * Display pose latch offset in nano seconds
+     * @see QtiParcelableDisplayPoseLatchOffset.
+     */
+    @nullable QtiParcelableDisplayPoseLatchOffset displayPoseLatchOffset;
 }

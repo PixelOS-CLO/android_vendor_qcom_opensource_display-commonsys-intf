@@ -4,12 +4,12 @@
  */
 
 package vendor.qti.hardware.display.composer3;
-import android.hardware.graphics.common.Rect;
 
+/**
+  size of a quad layer with the specified width and height in meters
+*/
 @VintfStability
-parcelable QtiPrivacyRegion {
-    float cornerRadius;
-    Rect rect;
-    int index;
-    boolean isDimming;
+parcelable QtiLayerQuadSize {
+    float width;
+    float height;
 }

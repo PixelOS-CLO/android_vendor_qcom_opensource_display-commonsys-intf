@@ -21,10 +21,22 @@
 // later when a module using the interface is updated, e.g., Mainline modules.
 
 package vendor.qti.hardware.display.composer3;
+import vendor.qti.hardware.display.composer3.QtiDisplayProjectionMatrix;
+import vendor.qti.hardware.display.composer3.QtiLayerOrientation;
+
+/**
+  Display Device configuration
+
+  projectionMatrix for left and right eye
+  rotation for left and right eye
+*/
 @VintfStability
-interface IQtiComposer3Client {
-  android.hardware.graphics.composer3.CommandResultPayload[] qtiExecuteCommands(in android.hardware.graphics.composer3.DisplayCommand[] commands, in vendor.qti.hardware.display.composer3.QtiDisplayCommand[] qtiCommands);
-  void qtiTryDrawMethod(long display, vendor.qti.hardware.display.composer3.QtiDrawMethod drawMethod);
-  void qtiSetDisplayDeviceConfig(long display, in vendor.qti.hardware.display.composer3.QtiDisplayDeviceConfig displayDeviceConfig);
-  vendor.qti.hardware.display.composer3.QtiDisplayViewMode qtiGetDisplayViewMode(long display);
+parcelable QtiDisplayDeviceConfig
+{
+    QtiDisplayProjectionMatrix[2] projectionMatrix;
+    float[256] gamma;
+    /** @deprecated Field 'rotation' is obsolete. Do not use. */
+    QtiLayerOrientation[2] rotation;
+    /** @deprecated Field 'calibrationFileStr' is obsolete. Do not use. */
+    char[512] calibrationFileStr;
 }

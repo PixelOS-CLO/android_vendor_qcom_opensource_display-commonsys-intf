@@ -27,4 +27,5 @@ parcelable QtiDisplayCommand {
   vendor.qti.hardware.display.composer3.QtiLayerCommand[] qtiLayers;
   @nullable android.hardware.graphics.composer3.ClientTarget clientTarget_3_1;
   long time;
+  @nullable vendor.qti.hardware.display.composer3.QtiParcelableDisplayPoseLatchOffset displayPoseLatchOffset;
 }

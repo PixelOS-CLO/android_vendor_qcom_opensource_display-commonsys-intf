@@ -4,12 +4,14 @@
  */
 
 package vendor.qti.hardware.display.composer3;
-import android.hardware.graphics.common.Rect;
 
+/*
+  Display View Mode Type
+*/
 @VintfStability
-parcelable QtiPrivacyRegion {
-    float cornerRadius;
-    Rect rect;
-    int index;
-    boolean isDimming;
+@Backing(type="int")
+enum QtiDisplayViewMode {
+  NONE = 0x0,
+  MONOCULAR = 0x1,
+  BINOCULAR = 0x2,
 }
